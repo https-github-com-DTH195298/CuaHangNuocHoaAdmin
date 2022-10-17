@@ -10,6 +10,23 @@ class signup_Controller extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('signup_View');
+
+		//truyen du lieu vao model
+		$name = $this->input->post('name');
+		$email = $this->input->post('email');
+		$password = $this->input->post('password');
+
+		$this->load->model('signupData_Model');
+
+		if ($this->signupData_Model->insert($name,$email,$password))
+		 {
+			// code...
+			$this->load->view('thanhcong');
+		}
+		else
+		{
+			echo "that bai";
+		}
 	}
 
 }
