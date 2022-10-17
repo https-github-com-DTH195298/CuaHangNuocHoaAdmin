@@ -1,4 +1,5 @@
-
+<!DOCTYPE html>
+<html>
 <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -78,7 +79,6 @@
 
                 <img src="https://png.pngtree.com/png-clipart/20190924/original/pngtree-student-card-icon-in-trendy-style-isolated-background-png-image_4850580.jpg"
                   class="img-fluid" alt="Sample image">
-
               </div>
             </div>
           </div>
@@ -87,3 +87,4 @@
     </div>
   </div>
 </section>
+</html>
