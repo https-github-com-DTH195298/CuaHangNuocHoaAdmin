@@ -10833,5 +10833,8 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.sidebar{
+  border-radius: 10px;
+}
 
 /*# sourceMappingURL=bootstrap.css.map */
