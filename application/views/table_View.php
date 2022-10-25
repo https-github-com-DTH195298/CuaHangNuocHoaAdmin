@@ -407,7 +407,6 @@
                                             <td><?= $value['Start_date'] ?></td>
                                             <td><?= $value['Salary'] ?></td>
                                             <td><a class="btn btn-danger"  href="table/deleteData/<?= $value['id']?>">Delete</a></td>
-                                            <a class="btn btn-danger"  href="table/showDetailsData/<?= $value['id']?>">Details</a></td>
                                         </tr>
                                         <?php endforeach ?>
                                     </tbody>

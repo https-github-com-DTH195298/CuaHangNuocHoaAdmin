@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -23,6 +23,22 @@
         <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
+
+            <!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
+  rel="stylesheet"
+/>
     </head>
 
 
@@ -363,59 +379,43 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Staff Table</h1>
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Details Staff table</h6>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Location</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
-                                            <th>Details</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Location</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
-                                            <th>Details</th>
-                                        </tr>
-<!--                                         du lieu lay tu database -->                                    
-                                    </tfoot>
-                                    <tbody>
-                                        <?php foreach ($dulieucontroller as $value): ?>
-                                            <tr>
-                                            <td><?= $value['name'] ?></td>
-                                            <td><?= $value['Position'] ?></td>
-                                            <td><?= $value['Location'] ?></td>
-                                            <td><?= $value['Age'] ?></td>
-                                            <td><?= $value['Start_date'] ?></td>
-                                            <td><?= $value['Salary'] ?></td>
-                                            <td><a class="btn btn-danger"  href="table/deleteData/<?= $value['id']?>">Delete</a></td>
-                                            <a class="btn btn-danger"  href="table/showDetailsData/<?= $value['id']?>">Details</a></td>
-                                        </tr>
-                                        <?php endforeach ?>
-                                    </tbody>
-                                </table>
-                                <a class="btn btn-success" href="addStaff">Add Staff</a></td>
-                            </div>
-                        </div>
-                    </div>
+        <form class="form-control-lg" action="addStaff_Controller" method="post" enctype="multidata/form-data">
+          <!-- Name input -->
+          <div class="form-outline" >
+            <label class="form-label" >Name</label>
+            <br>
+            <input type="text" name="name" class="form-control-lg" />
+          </div>
+          <div class="form-outline">
+            <label class="form-label" >Position</label>
+            <br>
+            <input type="text" name="Position" class="form-control-lg" />
+          </div>
+          <div class="form-outline">
+            <label class="form-label" >Location</label>
+            <br>
+            <input type="text" name="Location" class="form-control-lg" />
+          </div>
+          <div class="form-outline">
+            <label class="form-label" >Age</label>
+            <br>
+            <input type="text" name="Age" class="form-control-lg" />
+          </div>
+          <div class="form-outline" >
+            <label class="form-label" >Start Day</label>
+            <input type="date" name="Start_Date" class="form-control" />
+            <label for="datetimepickerInline" class="form-label"></label>
+        </div>
+        <br>
+        <div class="form-outline">
+            <label class="form-label" >Salary</label>
+            <br>
+            <input type="text" name="Salary" class="form-control-lg" />
+          </div>
+          <hr>
+                    <!-- Submit input -->
+            <input type="submit" class="btn btn-primary btn-block mb-4" width="50%">Add Staff</input>
+</form>
                 </div>
                 <!-- /.container-fluid -->
 
@@ -479,6 +479,7 @@
 
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
 
 </body>
 

@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class homepage extends CI_Controller {
+class addStaff extends CI_Controller {
 
 	public function __construct()
 	{
@@ -12,10 +12,12 @@ class homepage extends CI_Controller {
 		$this->load->model('tableData_Model');
 		$dulieu = $this->tableData_Model->getdatabase();
 		$dulieu = array('dulieucontroller' => $dulieu );//change dulieu to array
-		$this->load->view('homepage_View', $dulieu, FALSE);
+		//echo '<pre>';
+		//var_dump($dulieu);
+		$this->load->view('addStaff_View', $dulieu, FALSE);
 	}
 
 }
 
-/* End of file homepage_Controller.php */
-/* Location: ./application/controllers/homepage_Controller.php */
+/* End of file addStaff.php */
+/* Location: ./application/controllers/addStaff.php */
