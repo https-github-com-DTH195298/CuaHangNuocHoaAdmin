@@ -13,7 +13,7 @@
     <img src="..." class="card-img-top" alt="...">
     <div class="card-body">
     <h5 class="card-title">Card title</h5>
-    <?php $value = $dulieucontroller   ?>
+    <?php $value = $dulieucontroller ?>
         
         <tr><?= $value['id'] ?></tr>
         <hr>
@@ -31,7 +31,7 @@
         <hr>
         <tr><a class="btn btn-warning" href="changeDataStaff">Details</a></tr>
         
-        <?php  ?>
+        <?php ?>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -28,12 +28,15 @@
     </head>
 
 
+
 <body id="page-top">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <!-- Sidebar -->
+        <!-- noi de sidebar -->
+
+
         <?php require('sideBar.php') ?>
         <!-- End of Sidebar -->
 
@@ -44,11 +47,14 @@
             <div id="content">
 
                 <!-- Topbar -->
+
                 <?php require('navBar.php') ?>
+                <!-- noide navbar -->
+
+
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <?php require('addStaff.php') ?>
                 <!-- /.container-fluid -->
 
             </div>
@@ -111,7 +117,8 @@
 
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
+
+    
 
 </body>
 
