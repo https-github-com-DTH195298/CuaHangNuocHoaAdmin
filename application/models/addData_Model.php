@@ -22,3 +22,6 @@ class addData_Model extends CI_Model {
 
 /* End of file addData_Model.php */
 /* Location: ./application/models/addData_Model.php */
+
+/* End of file addData_Model.php */
+/* Location: ./application/models/addData_Model.php */
