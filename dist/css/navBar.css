@@ -1,6 +1,7 @@
 .headernavBar{
 	width: 100%;
-	background-image: linear-gradient(to right, #de6262, #ffb88c) ;
+	height: auto;
+	background-image: linear-gradient(to top, #de6262, #ffb88c) ;
 }
 .navbar-brand{
 	color: white!important;

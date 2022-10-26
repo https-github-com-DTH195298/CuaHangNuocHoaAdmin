@@ -9,10 +9,10 @@ class shopPage extends CI_Controller {
 
 	public function index()
 	{
-		// $this->load->model('tableData_Model');
-		// $dulieu = $this->tableData_Model->getdatabase();
-		// $dulieu = array('dulieucontroller' => $dulieu );//change dulieu to array
-		$this->load->view('shopPage_View');
+		 $this->load->model('products_Model');
+		 $dulieu = $this->products_Model->getdatabase();
+		 $dulieu = array('dulieucontroller' => $dulieu );//change dulieu to array
+		$this->load->view('shopPage_View', $dulieu, false);
 	}
 
 }

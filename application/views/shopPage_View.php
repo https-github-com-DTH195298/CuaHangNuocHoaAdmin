@@ -36,8 +36,6 @@
 
         <!-- noi de sidebar -->
 
-
-        <?php require('sideBar.php') ?>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -56,8 +54,29 @@
 
                 <!-- Begin Page Content -->
                 <!-- /.container-fluid -->
+                
 
-            </div>
+    <div class="container">
+    <div class="row row-cols-3 g-3 p-4">
+                                    <?php foreach ($dulieucontroller as $value): ?>
+                                    <div class="col-lg-3 card rounded shadow p-4 py-3 bg-white " style="width: auto;">
+                                    <img src="..." class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                    <h5 class="card-title"><?= $value['name'] ?></h5>
+                                    <p class="card-text"><?= $value['brand'] ?></p>
+                                    <p class="card-text"><?= $value['price'] ?></p>
+                                    <p class="card-text"><?= $value['amount'] ?></p>
+                                    <p class="card-text"><?= $value['imageproduct'] ?></p>
+                                    <a href="#" class="btn btn-primary">Xem Sản phẩm</a>
+                                    </div>
+                                    </div>
+                                    <br>
+                                    <?php endforeach ?>
+</div>
+</div>
+
+
+                        
             <!-- End of Main Content -->
 
             <!-- Footer -->
