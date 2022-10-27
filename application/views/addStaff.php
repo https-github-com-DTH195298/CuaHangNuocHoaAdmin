@@ -32,8 +32,11 @@
             <br>
             <input type="text" name="Salary" class="form-control-lg" />
           </div>
-          <hr>
+          <br>
+          <div class="form-outline">
+            <br>
+            <input type="submit" class="form-control-lg" />
+          </div>
                     <!-- Submit input -->
-            <input type="submit" class="btn btn-primary btn-block mb-4" width="50%">Add Staff</input>
 </form>
                 </div>
