@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -28,14 +28,13 @@
     </head>
 
 
-
 <body id="page-top">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <!-- noi de sidebar -->
-
+        <!-- Sidebar -->
+        <?php require('sideBar.php') ?>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -45,49 +44,15 @@
             <div id="content">
 
                 <!-- Topbar -->
-
                 <?php require('navBar.php') ?>
-                <!-- noide navbar -->
-
-
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
+               <?php require('editStaff.php') ?> 
                 <!-- /.container-fluid -->
-                
 
-    <div class="container">
-    <div class="row row-cols-3 g-3 p-4">
-                                    <?php foreach ($dulieucontroller as $value): ?>
-                                    <div class="col-lg-3 card rounded shadow p-4 py-3 bg-white " style="width: auto;">
-                                    <img src="..." class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                    <h5 class="card-title"><?= $value['name'] ?></h5>
-                                    <p class="card-text"><?= $value['brand'] ?></p>
-                                    <p class="card-text"><?= $value['price'] ?></p>
-                                    <p class="card-text"><?= $value['amount'] ?></p>
-                                    <p class="card-text"><?= $value['imageproduct'] ?></p>
-                                    <a  href="shopPage/editProducts/<?= $value['id']?>" class="btn btn-primary">Xem Sản phẩm</a>
-                                    </div>
-                                    </div>
-                                    <br>
-                                    <?php endforeach ?>
-</div>
-</div>
-
-
-                        
+            </div>
             <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2022</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
 
         </div>
         <!-- End of Content Wrapper -->
@@ -136,8 +101,7 @@
 
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
-
-    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
 
 </body>
 

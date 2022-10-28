@@ -97,10 +97,10 @@
                                             <td><?= $value['Position'] ?></td>
                                             <td><?= $value['Location'] ?></td>
                                             <td><?= $value['Age'] ?></td>
-                                            <td><?= $value['Start_date'] ?></td>
+                                            <td><?= $value['Start_Date'] ?></td>
                                             <td><?= $value['Salary'] ?></td>
                                             <td><a class="btn btn-danger"  href="table/deleteData/<?= $value['id']?>">Delete</a></td>
-                                            <td><a class="btn btn-danger"  href="table/deleteData/<?= $value['id']?>">Details</a></td>
+                                            <td><a class="btn btn-warning"  href="homepage/editStaff/<?= $value['id']?>">Edit</a></td>
                                         </tr>
                                         <?php endforeach ?>
                                     </tbody>

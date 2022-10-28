@@ -29,6 +29,28 @@ class products_Model extends CI_Model {
 			}
 	}
 
+	function editProductById($i)
+	{
+		$this->db->select('*');
+		$this->db->where('id', $i);
+		$dulieu =$this->db->get('products');
+		$dulieu = $dulieu->result_array();
+		return $dulieu;
+	}
+	public function updateDataById($id,$name,$brand,$price,$amount,$imageproduct)
+	{
+		$dulieucanupdate = array(
+			'id' => $id,
+			'name' => $name,
+			'brand' =>$brand,
+			'price' => $price,
+			'amount' => $amount,
+			'imageproduct' => $imageproduct
+			);
+		$this->db->where('id', $id);
+		 return $this->db->update('products', $dulieucanupdate);
+	}
+
 }
 
 /* End of file tableData_Model.php */

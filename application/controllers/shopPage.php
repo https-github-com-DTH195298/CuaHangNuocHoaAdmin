@@ -14,6 +14,38 @@ class shopPage extends CI_Controller {
 		 $dulieu = array('dulieucontroller' => $dulieu );//change dulieu to array
 		$this->load->view('shopPage_View', $dulieu, false);
 	}
+	public function editProducts($idLayVe)
+	{
+		$this->load->model('products_Model');
+		$ketqua = $this->products_Model->editProductById($idLayVe);
+		$ketqua = array('mangketqua' => $ketqua);
+
+		//truyen ket qua vao sua du lieu
+
+		$this->load->view('editProduct_View', $ketqua,FALSE);
+	}
+
+	public function updateProduct()
+	{
+		//lay du lieu tu view ve
+		$id = $this->input->post('id');
+		$name = $this->input->post('name');
+		$brand = $this->input->post('brand');
+		$price = $this->input->post('price');
+		$amount = $this->input->post('amount');
+		$imageproduct = $this->input->post('imageproduct');
+// 
+
+		$this->load->model('products_Model');
+		// su dung ham trong models  voi gia tri nhan duoc
+		if ($this->products_Model->updateDataById($id,$name,$brand,$price,$amount,$imageproduct)) {
+			echo 'thanh cong';
+		}
+		else {
+			echo 'khong thanh cong';
+		}
+
+	}
 
 }
 
