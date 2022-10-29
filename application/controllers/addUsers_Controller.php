@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class addAccount_Controller extends CI_Controller {
+class addUsers_Controller extends CI_Controller {
 
 	public function __construct()
 	{
@@ -10,19 +10,19 @@ class addAccount_Controller extends CI_Controller {
 	public function index()
 	{
 		//truyen du lieu vao model
-		$name = $this->input->post('email');
-		$Position = $this->input->post('password');
-		$Location = $this->input->post('avatar');
+		$email = $this->input->post('email');
+		$password = $this->input->post('password');
+		$avatar = $this->input->post('avatar');
 
-		$this->load->model('addAccount_Model');
+		$this->load->model('addUsers_Model');
 
-		if ($this->addAccount_Model->insert($email, $password, $avatar))
+		if ($this->addUsers_Model->insert($email, $password, $avatar))
 		 {
 			// code...
-			$this->load->model('listAccount_Model');
-			$dulieu = $this->tableData_Model->getdatabase();
+			$this->load->model('listUsers_Model');
+			$dulieu = $this->listUsers_Model->getdatabase();
 			$dulieu = array('dulieucontroller' => $dulieu );//change dulieu to array
-			$this->load->view('listAccount_View',$dulieu, FALSE);
+			$this->load->view('listUsers_View',$dulieu, FALSE);
 		}
 		else
 		{

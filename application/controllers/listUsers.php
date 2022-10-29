@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class listAccount extends CI_Controller {
+class listUsers extends CI_Controller {
 
 	public function __construct()
 	{
@@ -9,20 +9,29 @@ class listAccount extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->model('listAccount_Model');
-		$dulieu = $this->listAccount_Model->getdatabase();
+		$this->load->model('listUsers_Model');
+		$dulieu = $this->listUsers_Model->getdatabase();
 		$dulieu = array('dulieucontroller' => $dulieu );//change dulieu to array
-		$this->load->view('listAccount_View', $dulieu, FALSE);
+		$this->load->view('listUsers_View', $dulieu, FALSE);
 	}
 	public function editUsers($idLayVe)
 	{
-		$this->load->model('listAccount_Model');
-		$ketqua = $this->listAccount_Model->editusersById($idLayVe);
+		$this->load->model('listUsers_Model');
+		$ketqua = $this->listUsers_Model->editusersById($idLayVe);
 		$ketqua = array('mangketqua' => $ketqua);
 
 		//truyen ket qua vao sua du lieu
 
 		$this->load->view('editUsers_View', $ketqua,FALSE);
+	}
+	function deleteData($idnhanduoc)
+	{
+		
+		$this->load->model('listUsers_Model');
+		$this->listUsers_Model->deleteDataById($idnhanduoc);
+		$dulieu = $this->listUsers_Model->getdatabase();
+		$dulieu = array('dulieucontroller' => $dulieu );//change dulieu to array
+		$this->load->view('listUsers_View', $dulieu, FALSE);
 	}
 
 	public function updateUsers()
@@ -46,5 +55,5 @@ class listAccount extends CI_Controller {
 
 }
 
-/* End of file listAccount.php */
-/* Location: ./application/controllers/listAccount.php */
+/* End of file listUsers.php */
+/* Location: ./application/controllers/listUsers.php */

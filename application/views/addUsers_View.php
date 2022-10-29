@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Edit User</title>
+        <title>Login - SB Admin</title>
         <link type="text/css" href="dist/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <script type="text/javascript"></script>
@@ -48,11 +48,16 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-               <?php require('editStaff.php') ?> 
+                <?php require('addUsers.php') ?>
                 <!-- /.container-fluid -->
 
             </div>
             <!-- End of Main Content -->
+
+            <!-- Footer -->
+        
+            </footer>
+            <!-- End of Footer -->
 
         </div>
         <!-- End of Content Wrapper -->

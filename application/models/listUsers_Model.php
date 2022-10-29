@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class listAccount_Model extends CI_Model {
+class listUsers_Model extends CI_Model {
 
 	public $variable;
 
@@ -50,5 +50,5 @@ class listAccount_Model extends CI_Model {
 
 }
 
-/* End of file listAccount.php */
-/* Location: ./application/models/listAccount.php */
+/* End of file listUsers.php */
+/* Location: ./application/models/listUsers.php */

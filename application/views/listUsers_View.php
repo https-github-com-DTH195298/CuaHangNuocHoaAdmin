@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>List Account</title>
+        <title>List Users</title>
         <link type="text/css" href="dist/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <script type="text/javascript"></script>
@@ -56,11 +56,11 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Staff Table</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Account Table</h1>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Details Staff table</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Details Account table</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -90,13 +90,13 @@
                                             <td><?= $value['email'] ?></td>
                                             <td><?= $value['password'] ?></td>
                                             <td><?= $value['avatar'] ?></td>
-                                            <td><a class="btn btn-danger"  href="table/deleteData/<?= $value['id']?>">Delete</a></td>
+                                            <td><a class="btn btn-danger"  href="listUsers/deleteData/<?= $value['id']?>">Delete</a></td>
                                             <td><a class="btn btn-warning"  href="listAccount_Controller/editUsers/<?= $value['id']?>">Edit</a></td>
                                         </tr>
                                         <?php endforeach ?>
                                     </tbody>
                                 </table>
-                                <a class="btn btn-success" href="addStaff">Add Account</a></td>
+                                <a class="btn btn-success" href="addUsers">Add Account</a></td>
                             </div>
                         </div>
                     </div>

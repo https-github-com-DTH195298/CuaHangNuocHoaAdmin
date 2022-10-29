@@ -37,7 +37,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Setting</h6>
-                        <a class="collapse-item" href="listAccount">Account</a>
+                        <a class="collapse-item" href="listUsers">Account</a>
                         <a class="collapse-item" href="cards">Backup Data</a>
                     </div>
                 </div>
