@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Homepage</title>
+        <title>List Account</title>
         <link type="text/css" href="dist/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <script type="text/javascript"></script>
@@ -67,24 +67,18 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Location</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>email</th>
+                                            <th>password</th>
+                                            <th>avatar</th>
                                             <th>Delete</th>
                                             <th>Details</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Location</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>email</th>
+                                            <th>password</th>
+                                            <th>avatar</th>
                                             <th>Delete</th>
                                             <th>Details</th>
                                         </tr>
@@ -93,19 +87,16 @@
                                     <tbody>
                                         <?php foreach ($dulieucontroller as $value): ?>
                                             <tr>
-                                            <td><?= $value['name'] ?></td>
-                                            <td><?= $value['Position'] ?></td>
-                                            <td><?= $value['Location'] ?></td>
-                                            <td><?= $value['Age'] ?></td>
-                                            <td><?= $value['Start_Date'] ?></td>
-                                            <td><?= $value['Salary'] ?></td>
+                                            <td><?= $value['email'] ?></td>
+                                            <td><?= $value['password'] ?></td>
+                                            <td><?= $value['avatar'] ?></td>
                                             <td><a class="btn btn-danger"  href="table/deleteData/<?= $value['id']?>">Delete</a></td>
-                                            <td><a class="btn btn-warning"  href="homepage/editStaff/<?= $value['id']?>">Edit</a></td>
+                                            <td><a class="btn btn-warning"  href="listAccount_Controller/editUsers/<?= $value['id']?>">Edit</a></td>
                                         </tr>
                                         <?php endforeach ?>
                                     </tbody>
                                 </table>
-                                <a class="btn btn-success" href="addStaff">Add Staff</a></td>
+                                <a class="btn btn-success" href="addStaff">Add Account</a></td>
                             </div>
                         </div>
                     </div>

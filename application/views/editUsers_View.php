@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Homepage</title>
+        <title>Login - SB Admin</title>
         <link type="text/css" href="dist/css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <script type="text/javascript"></script>
@@ -27,14 +27,13 @@
             rel="stylesheet">
     </head>
 
+
 <body id="page-top">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <!-- noi de sidebar -->
-
-
+        <!-- Sidebar -->
         <?php require('sideBar.php') ?>
         <!-- End of Sidebar -->
 
@@ -45,85 +44,15 @@
             <div id="content">
 
                 <!-- Topbar -->
-
                 <?php require('navBar.php') ?>
-                <!-- noide navbar -->
-
-
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Staff Table</h1>
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Details Staff table</h6>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Location</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
-                                            <th>Delete</th>
-                                            <th>Details</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Location</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
-                                            <th>Delete</th>
-                                            <th>Details</th>
-                                        </tr>
-<!--                                         du lieu lay tu database -->                                    
-                                    </tfoot>
-                                    <tbody>
-                                        <?php foreach ($dulieucontroller as $value): ?>
-                                            <tr>
-                                            <td><?= $value['name'] ?></td>
-                                            <td><?= $value['Position'] ?></td>
-                                            <td><?= $value['Location'] ?></td>
-                                            <td><?= $value['Age'] ?></td>
-                                            <td><?= $value['Start_Date'] ?></td>
-                                            <td><?= $value['Salary'] ?></td>
-                                            <td><a class="btn btn-danger"  href="table/deleteData/<?= $value['id']?>">Delete</a></td>
-                                            <td><a class="btn btn-warning"  href="homepage/editStaff/<?= $value['id']?>">Edit</a></td>
-                                        </tr>
-                                        <?php endforeach ?>
-                                    </tbody>
-                                </table>
-                                <a class="btn btn-success" href="addStaff">Add Staff</a></td>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               <?php require('editStaff.php') ?> 
                 <!-- /.container-fluid -->
 
             </div>
             <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2022</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
 
         </div>
         <!-- End of Content Wrapper -->
@@ -172,8 +101,7 @@
 
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
-
-    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
 
 </body>
 
