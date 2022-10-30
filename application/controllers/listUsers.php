@@ -31,6 +31,8 @@ class listUsers extends CI_Controller {
 		$this->listUsers_Model->deleteDataById($idnhanduoc);
 		$dulieu = $this->listUsers_Model->getdatabase();
 		$dulieu = array('dulieucontroller' => $dulieu );//change dulieu to array
+		echo current_url();
+		$currentUrl = current_url;
 		$this->load->view('listUsers_View', $dulieu, FALSE);
 	}
 

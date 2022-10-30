@@ -37,7 +37,7 @@ class homepage extends CI_Controller {
 		$Start_Date = $this->input->post('Start_Date');
 		$Salary = $this->input->post('Salary');
 
-		$this->load->model('tableData_Model');
+		$this->load->model('staffData_Model');
 		// su dung ham trong models  voi gia tri nhan duoc
 		if ($this->tableData_Model->updateDataById($id,$name,$Position,$Location,$Age,$Start_Date,$Salary)) {
 			echo 'thanh cong';
@@ -45,7 +45,15 @@ class homepage extends CI_Controller {
 		else {
 			echo 'khong thanh cong';
 		}
-
+	}
+	function deleteData($idnhanduoc)
+	{
+		
+		$this->load->model('staffData_Model');
+		$this->staffData_Model->deleteDataById($idnhanduoc);
+		$dulieu = $this->staffData_Model->getdatabase();
+		$dulieu = array('dulieucontroller' => $dulieu );//change dulieu to array
+		$this->load->view('table_View', $dulieu, FALSE);
 	}
 }
 

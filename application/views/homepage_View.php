@@ -99,7 +99,19 @@
                                             <td><?= $value['Age'] ?></td>
                                             <td><?= $value['Start_Date'] ?></td>
                                             <td><?= $value['Salary'] ?></td>
-                                            <td><a class="btn btn-danger"  href="table/deleteData/<?= $value['id']?>">Delete</a></td>
+                                            <td><a class="btn btn-danger"  href="<?php 
+                                            //xu ly tra ve duong dan hien hanh
+                                            if(current_url('') != base_url('') . "index.php/homepage")
+                                            {
+                                                echo base_url('') . "index.php/";
+                                                echo "staff/deleteData/" . $value['id'];
+                                            }
+                                            else
+                                            {
+                                                echo "listUsers/deleteData/" . $value['id'];
+                                            }
+                                        ?>"
+                                            >Delete</a></td>
                                             <td><a class="btn btn-warning"  href="homepage/editStaff/<?= $value['id']?>">Edit</a></td>
                                         </tr>
                                         <?php endforeach ?>

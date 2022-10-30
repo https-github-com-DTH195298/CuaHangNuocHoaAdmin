@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class tableData_Model extends CI_Model {
+class staffData_Model extends CI_Model {
 
 	public $variable;
 
@@ -33,14 +33,6 @@ class tableData_Model extends CI_Model {
 		$this->db->select('*');
 		$this->db->where('id', $i);
 		$dulieu =$this->db->get('staff');
-		$dulieu = $dulieu->result_array();
-		return $dulieu;
-	}
-	function editProductsById($i)
-	{
-		$this->db->select('*');
-		$this->db->where('id', $i);
-		$dulieu =$this->db->get('products');
 		$dulieu = $dulieu->result_array();
 		return $dulieu;
 	}

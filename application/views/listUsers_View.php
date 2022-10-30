@@ -57,6 +57,8 @@
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Account Table</h1>
+                    <h3><?php echo current_url(); ?></h3>
+                    <h3><?php echo base_url('') ?></h3>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
@@ -90,8 +92,20 @@
                                             <td><?= $value['email'] ?></td>
                                             <td><?= $value['password'] ?></td>
                                             <td><?= $value['avatar'] ?></td>
-                                            <td><a class="btn btn-danger"  href="listUsers/deleteData/<?= $value['id']?>">Delete</a></td>
-                                            <td><a class="btn btn-warning"  href="listAccount_Controller/editUsers/<?= $value['id']?>">Edit</a></td>
+                                            <td><a class="btn btn-danger"  href="<?php 
+                                            //xu ly tra ve duong dan hien hanh
+                                            if(current_url('') != base_url('') . "index.php/listUsers")
+                                            {
+                                                echo base_url('') . "index.php/";
+                                                echo "listUsers/deleteData/" . $value['id'];
+                                            }
+                                            else
+                                            {
+                                                echo "listUsers/deleteData/" . $value['id'];
+                                            }
+                                        ?>"
+                                            >Delete</a></td>
+                                <td><a class="btn btn-warning"  href="listUsers/editUsers/<?= $value['id']?>">Edit</a></td>
                                         </tr>
                                         <?php endforeach ?>
                                     </tbody>
