@@ -46,7 +46,6 @@
                 <!-- Topbar -->
                 <?php require('navBar.php') ?>
                 <!-- End of Topbar -->
-
                 <!-- Begin Page Content -->
                 <?php require('addUsers.php') ?>
                 <!-- /.container-fluid -->

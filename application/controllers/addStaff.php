@@ -9,8 +9,8 @@ class addStaff extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->model('tableData_Model');
-		$dulieu = $this->tableData_Model->getdatabase();
+		$this->load->model('listUsers_Model');
+		$dulieu = $this->listUsers_Model->getdatabase();
 		$dulieu = array('dulieucontroller' => $dulieu );//change dulieu to array
 		//echo '<pre>';
 		//var_dump($dulieu);

@@ -21,7 +21,7 @@ class staff extends CI_Controller {
 		$this->staffData_Model->deleteDataById($idnhanduoc);
 		$dulieu = $this->staffData_Model->getdatabase();
 		$dulieu = array('dulieucontroller' => $dulieu );//change dulieu to array
-		$this->load->view('table_View', $dulieu, FALSE);
+		$this->load->view('staff_View', $dulieu, FALSE);
 	}
 }
 

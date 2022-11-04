@@ -48,7 +48,7 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-               <?php require('editStaff.php') ?> 
+               <?php require('editUsers.php') ?> 
                 <!-- /.container-fluid -->
 
             </div>

@@ -9,16 +9,16 @@ class homepage extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->model('tableData_Model');
-		$dulieu = $this->tableData_Model->getdatabase();
+		$this->load->model('staffData_Model');
+		$dulieu = $this->staffData_Model->getdatabase();
 		$dulieu = array('dulieucontroller' => $dulieu );//change dulieu to array
 		$this->load->view('homepage_View', $dulieu, FALSE);
 	}
 
 	public function editStaff($idLayVe)
 	{
-		$this->load->model('tableData_Model');
-		$ketqua = $this->tableData_Model->editStaffById($idLayVe);
+		$this->load->model('staffData_Model');
+		$ketqua = $this->staffData_Model->editStaffById($idLayVe);
 		$ketqua = array('mangketqua' => $ketqua);
 
 		//truyen ket qua vao sua du lieu

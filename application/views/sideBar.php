@@ -37,7 +37,20 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Setting</h6>
-                        <a class="collapse-item" href="listUsers">Account</a>
+                        <a class="collapse-item" href="
+
+                    <?php 
+                                            //xu ly tra ve duong dan hien hanh
+                                            if(current_url('') != base_url('') . "index.php/listUsers")
+                                            {
+                                                echo base_url('') . "index.php/";
+                                                echo "listUsers";
+                                            }
+                                            else
+                                            {
+                                                echo "listUsers";
+                                            }
+                                        ?>">Account</a>
                         <a class="collapse-item" href="cards">Backup Data</a>
                     </div>
                 </div>
@@ -87,8 +100,32 @@
                 <div id="collapsetable" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Option</h6>
-                        <a class="collapse-item" href="table">Staff table</a>
-                        <a class="collapse-item" href="table">Users table</a>
+                        <a class="collapse-item" href="
+                        <?php 
+                                            //xu ly tra ve duong dan hien hanh
+                                            if(current_url('') != base_url('') . "index.php/staff")
+                                            {
+                                                echo base_url('') . "index.php/";
+                                                echo "staff";
+                                            }
+                                            else
+                                            {
+                                                echo "staff";
+                                            }
+                                        ?>">Staff table</a>
+                        <a class="collapse-item" href="
+                        <?php 
+                                            //xu ly tra ve duong dan hien hanh
+                                            if(current_url('') != base_url('') . "index.php/listUsers")
+                                            {
+                                                echo base_url('') . "index.php/";
+                                                echo "listUsers";
+                                            }
+                                            else
+                                            {
+                                                echo "listUsers";
+                                            }
+                                        ?>">Users table</a>
                     </div>
                 </div>
             </li>

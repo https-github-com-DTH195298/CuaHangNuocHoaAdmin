@@ -57,8 +57,8 @@
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Account Table</h1>
-                    <h3><?php echo current_url(); ?></h3>
-                    <h3><?php echo base_url('') ?></h3>
+                    <!-- <h3><?php echo current_url(); ?></h3>
+                    <h3><?php echo base_url('') ?></h3> -->
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
@@ -105,12 +105,35 @@
                                             }
                                         ?>"
                                             >Delete</a></td>
-                                <td><a class="btn btn-warning"  href="listUsers/editUsers/<?= $value['id']?>">Edit</a></td>
+                                <td><a class="btn btn-warning"  href="
+                                    <?php 
+                                            //xu ly tra ve duong dan hien hanh
+                                            if(current_url('') != base_url('') . "index.php/listUsers")
+                                            {
+                                                echo base_url('') . "index.php/";
+                                                echo "listUsers/editUsers/" . $value['id'];
+                                            }
+                                            else
+                                            {
+                                                echo "listUsers/editUsers/" . $value['id'];
+                                            }
+                                        ?>">Edit</a></td>
                                         </tr>
                                         <?php endforeach ?>
                                     </tbody>
                                 </table>
-                                <a class="btn btn-success" href="addUsers">Add Account</a></td>
+                                <a class="btn btn-success" href="<?php 
+                                            //xu ly tra ve duong dan hien hanh
+                                            if(current_url('') != base_url('') . "index.php/listUsers")
+                                            {
+                                                echo base_url('') . "index.php/";
+                                                echo "addUsers";
+                                            }
+                                            else
+                                            {
+                                                echo "addUsers";
+                                            }
+                                        ?>">Add Account</a></td>
                             </div>
                         </div>
                     </div>

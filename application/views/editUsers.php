@@ -1,4 +1,4 @@
-users_Vi<?php foreach ($mangketqua as $value): ?>
+<?php foreach ($mangketqua as $value): ?>
 <div class="container-fluid">
         <form class="form-control-lg" action="../updateUsers" method="post" enctype="multidata/form-data">
           <!-- Name input -->
