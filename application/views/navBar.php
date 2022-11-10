@@ -1,6 +1,6 @@
 <section class="headernavBar">
     <div class="container">
-        <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow">
+        <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top">
                     <!-- Sidebar Toggle (Topbar) -->
                     <form class="form-inline">
                         <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -116,7 +116,7 @@
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
+                                        <img class="rounded-circle" src="https://raw.githubusercontent.com/thumlabero1/nhatlinh/main/avatar.jpg"
                                             alt="...">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
