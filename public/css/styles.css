@@ -1,0 +1,54 @@
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 20px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+h3{
+  text-shadow: 2px 2px 2px silver;
+}
+.carousel-inner img {  
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+}
+.carousel-caption h3 {
+    color: #fff !important;
+}
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+  }
+}
+footer {
+    background-color: #000000;
+    color: #f5f5f5;
+    padding: 32px;
+}
+footer a:hover {
+    color: #777;
+    text-decoration: none;
+}  
+* {
+  box-sizing: border-box; }
